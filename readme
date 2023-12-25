@@ -1,6 +1,10 @@
 编译:
 make -C admon/build admon_gui
 
+问题: Error :Arc dependent binaries in noarch package (CentOS 6.5)
+添加如下定义到spec中
+%define _binaries_in_noarch_packages_terminate_build   0
+
 build:
 clear;make package-rpm PACKAGE_DIR=packages BEEGFS_VERSION=7.1.5-local1
 
@@ -15,3 +19,5 @@ IBVSocket_checkConnection
 
 __IBVSocket_postWrite
     ibv_post_send
+
+
