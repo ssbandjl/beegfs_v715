@@ -1,0 +1,17 @@
+编译:
+make -C admon/build admon_gui
+
+build:
+clear;make package-rpm PACKAGE_DIR=packages BEEGFS_VERSION=7.1.5-local1
+
+
+
+
+__IBVSocket_waitForRecvCompletionEvent
+    ibv_poll_cq
+
+
+IBVSocket_checkConnection
+
+__IBVSocket_postWrite
+    ibv_post_send
