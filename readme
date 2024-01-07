@@ -1,3 +1,5 @@
+git@github.com:ssbandjl/beegfs_v715.git
+
 编译:
 make -C admon/build admon_gui
 
@@ -19,5 +21,26 @@ IBVSocket_checkConnection
 
 __IBVSocket_postWrite
     ibv_post_send
+
+
+admon-gui
+条带设置: stripe settings
+actionPerformed
+String url = HttpTk.generateAdmonUrl("/XML_Striping")
+parser.setUrl(url + params)
+...
+改变 change
+
+cpp
+int WebServer::requestHandler(struct mg_connection *conn) -> http服务端
+...
+    if (strcmp(requestInfo->uri
+    ...
+    else if (strcmp(requestInfo->uri, "/XML_Striping") == 0)
+    xmlhelper::striping(conn, requestInfo, postData, postDataLen) -> void xmlhelper::striping
+        NodeStoreMgmtEx* mgmtNodes = app->getMgmtNodes()
+        bool setPatternRes = managementhelper::setPattern
+...
+
 
 
